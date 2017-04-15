@@ -15,17 +15,3 @@
 .randomizer .mat-card {
     width: 40%;
 }
-
-.randomizer .failure {
-    width: 20%;
-}
-
-.success {
-    background: #DFF0D8;
-}
-.partial {
-    background: #FCF8E3;
-}
-.failure {
-    background: #F2DEDE;
-}

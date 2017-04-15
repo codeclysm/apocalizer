@@ -1,0 +1,6 @@
+<h2>{{move.name}}</h2>
+<ng-container *ngFor="let step of move.steps" [ngSwitch]="step.type">
+  <ap-move-action       *ngSwitchCase="'action'"      [data]="step"></ap-move-action>
+  <ap-move-randomizer   *ngSwitchCase="'randomizer'"  [data]="step"></ap-move-randomizer>
+  <ap-move-trigger      *ngSwitchCase="'trigger'"     [data]="step"></ap-move-trigger>
+</ng-container>

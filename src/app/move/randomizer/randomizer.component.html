@@ -1,0 +1,7 @@
+<md-card>
+  <md-card-subtitle>Randomizer</md-card-subtitle>
+  <md-card-content>{{ data.text }}</md-card-content>
+  <md-card *ngFor="let result of data.results" [class]="result.name">
+    {{ result.text }}
+  </md-card>
+</md-card>
