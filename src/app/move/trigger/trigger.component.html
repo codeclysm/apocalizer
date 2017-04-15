@@ -1,4 +1,6 @@
-<md-card (mouseover)="state='hover'" (mouseout)="state=''">
+<md-card (mouseover)="mouseover()" 
+         (mouseleave)="mouseleave()"
+         [@stateA]="state">
   <md-card-subtitle>Trigger</md-card-subtitle>
   <md-card-content [innerHTML]="data.text|MarkdownToHtml"></md-card-content>
   <md-input-container *ngIf="state=='edit'">
@@ -7,9 +9,9 @@
   <md-card-actions>
     <button md-button 
             *ngIf="state=='hover'"
-            (click)="state='edit'">Edit</button>
+            (click)="edit()">Edit</button>
     <button md-button 
             *ngIf="state=='edit'"
-            (click)="state=''">Save</button>
+            (click)="save()">Save</button>
   </md-card-actions>
 </md-card>
