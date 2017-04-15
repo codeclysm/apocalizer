@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material/material.module';
-import { MarkdownToHtmlModule } from 'ng2-markdown-to-html';
+import { MarkdownToHtmlModule } from 'markdown-to-html-pipe';
 
 import { MoveComponent } from './move.component';
 import { ActionComponent } from './action/action.component';
@@ -13,7 +13,7 @@ import { TriggerComponent } from './trigger/trigger.component';
   imports: [
     CommonModule,
     MaterialModule,
-    MarkdownToHtmlModule.forRoot(),
+    MarkdownToHtmlModule,
   ],
   declarations: [
     MoveComponent,

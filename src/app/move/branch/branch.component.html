@@ -1,7 +1,5 @@
 <md-card>
   <md-card-subtitle>Branch</md-card-subtitle>
   <md-card-content>{{ data.text }}</md-card-content>
-  <md-card *ngFor="let branch of data.branches">
-    <markdown-to-html>{{ branch }}</markdown-to-html>
-  </md-card>
+  <md-card *ngFor="let branch of data.branches" [innerHTML]="branch|MarkdownToHtml"></md-card>
 </md-card>

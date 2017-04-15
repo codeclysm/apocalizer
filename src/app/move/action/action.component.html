@@ -1,6 +1,4 @@
 <md-card>
   <md-card-subtitle>Action</md-card-subtitle>
-  <md-card-content>
-    <markdown-to-html>{{ data.text }}</markdown-to-html>
-  </md-card-content>
+  <md-card-content [innerHTML]="data.text|MarkdownToHtml"></md-card-content>
 </md-card>
