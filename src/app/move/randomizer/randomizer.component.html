@@ -2,6 +2,6 @@
   <md-card-subtitle>Randomizer</md-card-subtitle>
   <md-card-content>{{ data.text }}</md-card-content>
   <md-card *ngFor="let result of data.results" [class]="result.name">
-    {{ result.text }}
+    <markdown-to-html>{{ result.text }}</markdown-to-html>
   </md-card>
 </md-card>

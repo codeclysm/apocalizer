@@ -1,5 +1,9 @@
 :host {
     display: block;
     margin: 20px auto;
-    width: 50%;
+    width: 20%;
+}
+
+:host p {
+    margin: 0;
 }
