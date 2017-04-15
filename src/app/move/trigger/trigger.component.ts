@@ -9,6 +9,7 @@ import { Trigger } from '../move';
 })
 export class TriggerComponent implements Input {
   @Input() data: Trigger;
+  state: string = '';
   constructor() { }
 
 }
