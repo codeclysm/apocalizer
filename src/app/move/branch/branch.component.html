@@ -1,0 +1,7 @@
+<md-card>
+  <md-card-subtitle>Randomizer</md-card-subtitle>
+  <md-card-content>{{ data.text }}</md-card-content>
+  <md-card *ngFor="let branch of data.branches">
+    <markdown-to-html>{{ branch }}</markdown-to-html>
+  </md-card>
+</md-card>

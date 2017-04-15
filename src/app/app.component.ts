@@ -60,6 +60,23 @@ export class AppComponent {
           ]
         }
       ]
+    },
+    {
+      name: 'Sucker someone',
+      steps: [
+        {
+          type: 'trigger',
+          text: 'When you attack someone unsuspecting or helpless'
+        },
+        {
+          type: 'branch',
+          text: 'ask the MC if you could miss',
+          branches: [
+            'If you could, treat it as going aggro, but your victim has no choice to cave and do what you want',
+            'If you couldn’t, you simply inflict harm as established'
+          ]
+        }
+      ]
     }
   ]
 }

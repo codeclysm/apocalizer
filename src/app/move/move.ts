@@ -9,7 +9,9 @@ export class Action {
 }
 
 export class Branch {
-
+    type: string;
+    text: string;
+    branches: string[];
 }
 
 export class Randomizer {

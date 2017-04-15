@@ -5,6 +5,7 @@ import { MarkdownToHtmlModule } from 'ng2-markdown-to-html';
 
 import { MoveComponent } from './move.component';
 import { ActionComponent } from './action/action.component';
+import { BranchComponent } from './branch/branch.component';
 import { RandomizerComponent } from './randomizer/randomizer.component';
 import { TriggerComponent } from './trigger/trigger.component';
 
@@ -17,6 +18,7 @@ import { TriggerComponent } from './trigger/trigger.component';
   declarations: [
     MoveComponent,
     ActionComponent,
+    BranchComponent,
     RandomizerComponent,
     TriggerComponent,
   ],
