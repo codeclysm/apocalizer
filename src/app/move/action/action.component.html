@@ -1,4 +1,19 @@
-<md-card>
+<md-card (mouseover)="mouseover()" 
+         (mouseleave)="mouseleave()">
   <md-card-subtitle>Action</md-card-subtitle>
-  <md-card-content [innerHTML]="data.text|MarkdownToHtml"></md-card-content>
+  <md-card-content [@dim]="state" [innerHTML]="data.text|MarkdownToHtml"></md-card-content>
+  <md-input-container *ngIf="state=='edit'" class="edit">
+    <textarea mdInput [(ngModel)]="data.text"></textarea>
+  </md-input-container>
+  <md-card-actions>
+    <button md-raised-button 
+            [@fadeIn]="in"
+            *ngIf="state=='hover'"
+            (click)="edit()">Edit</button>
+    <button md-raised-button 
+            [@fadeIn]="in"
+            color="primary"
+            *ngIf="state=='edit'"
+            (click)="save()">Save</button>
+  </md-card-actions>
 </md-card>
