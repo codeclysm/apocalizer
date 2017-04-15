@@ -3,9 +3,9 @@ export class Move {
     steps: (Action|Branch|Randomizer|Trigger)[];
 }
 
+
 export class Action {
-    type: string;
-    text: string;
+
 }
 
 export class Branch {

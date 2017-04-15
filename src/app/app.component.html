@@ -1,1 +1,166 @@
-<ap-move *ngFor='let move of moves' [move]='move' [@moveStatus]="status(move)" (mouseover)="activate(move)"></ap-move>
+<ap-move *ngFor='let move of moves' [move]='move'></ap-move>
+<!--
+<div class="move">
+  <md-card>
+    <md-card-title>When you do something under fire, or dig in to endure fire</md-card-title>
+    <md-card-subtitle>Trigger</md-card-subtitle>
+  </md-card>
+  <md-card class="randomizer">
+    <md-card-title>roll+cool</md-card-title>
+    <md-card-subtitle>Randomizer</md-card-subtitle>
+    <md-card-content>
+      <md-card class="success">On a 10+, you do it</md-card>
+      <md-card class="partial">On a 7–9, you flinch, hesitate, or stall: the MC can offer you a worse outcome, a hard bargain, or an ugly choice</md-card>
+      <md-card class="failure">On a miss, be prepared for the worst</md-card>
+    </md-card-content>
+  </md-card>
+</div>
+
+<div class="move">
+  <md-card>
+    <md-card-title>When you go aggro on someone</md-card-title>
+    <md-card-subtitle>Trigger</md-card-subtitle>
+  </md-card>
+  <md-card class="randomizer">
+    <md-card-title>roll+hard</md-card-title>
+    <md-card-subtitle>Randomizer</md-card-subtitle>
+    <md-card-content>
+      <md-card class="success">
+        On a 10+, they have to choose:
+        <ul>
+          <li>Force your hand and suck it up</li>
+          <li>Cave and do what you want</li>
+        </ul>
+      </md-card>
+      <md-card class="partial">
+        On a 7–9, they have to choose:
+        <ul>
+          <li>Force your hand and suck it up</li>
+          <li>Cave and do what you want</li>
+          <li>Get the hell out of your way</li>
+          <li>Barricade themselves securely in</li>
+          <li>Give you something they think you want, or tell you what you want to hear</li>
+          <li>Back off calmly, hands where you can see</li>
+        </ul>
+      </md-card>
+      <md-card class="failure">On a miss, be prepared for the worst</md-card>
+    </md-card-content>
+  </md-card>
+</div>
+
+<div class="move">
+  <md-card>
+    <md-card-title>When you attack someone unsuspecting or helpless</md-card-title>
+    <md-card-subtitle>Trigger</md-card-subtitle>
+  </md-card>
+  <md-card class="branch">
+    <md-card-title>Ask the MC if you could miss</md-card-title>
+    <md-card-subtitle>Branch</md-card-subtitle>
+    <md-card-content>
+      <md-card>
+        If you could, treat it as going aggro, but your victim has no choice to cave and
+do what you want
+      </md-card>
+      <md-card>
+        If you couldn’t, you simply inflict harm as established
+      </md-card>
+    </md-card-content>
+
+  </md-card>
+</div>
+
+<div class="move">
+  <md-card>
+    <md-card-title>When you try to seduce, manipulate, bluff, fast-talk, or lie to an NPC</md-card-title>
+    <md-card-subtitle>Trigger</md-card-subtitle>
+  </md-card>
+  <md-card>
+    <md-card-subtitle>Action</md-card-subtitle>
+    <md-card-content>Give them a reason</md-card-content>
+  </md-card>
+  <md-card class="randomizer">
+    <md-card-title>roll+hot</md-card-title>
+    <md-card-subtitle>Randomizer</md-card-subtitle>
+    <md-card-content>
+      <md-card class="success">
+        On a 10+, they’ll go along with you, unless or until some fact or action betrays the reason
+you gave them
+      </md-card>
+      <md-card class="partial">
+        On a 7-9, they’ll go along with you, but they need some concrete
+assurance, corroboration, or evidence first
+      </md-card>
+      <md-card class="failure">On a miss, be prepared for the worst</md-card>
+    </md-card-content>
+  </md-card>
+</div>
+
+<div class="move">
+  <md-card>
+    <md-card-title>When you try to seduce, manipulate, bluff, fast-talk, or lie to a PC</md-card-title>
+    <md-card-subtitle>Trigger</md-card-subtitle>
+  </md-card>
+  <md-card>
+    <md-card-subtitle>Action</md-card-subtitle>
+    <md-card-content>Give them a reason</md-card-content>
+  </md-card>
+  <md-card class="randomizer">
+    <md-card-title>roll+hot</md-card-title>
+    <md-card-subtitle>Randomizer</md-card-subtitle>
+    <md-card-content>
+      <md-card class="success">
+        On a 10+, both:
+        <ul>
+          <li>If they go along with you, they mark experience</li>
+          <li>If they refuse, erase one of their stat highlights for the remainder of the session
+        </ul>
+        What they do then is up to them.
+      </md-card>
+      <md-card class="partial">
+        On a 7-9, choose 1:
+        <ul>
+          <li>If they go along with you, they mark experience</li>
+          <li>If they refuse, erase one of their stat highlights for the remainder of the session
+        </ul>
+        What they do then is up to them.
+      </md-card>
+      <md-card class="failure">On a miss, be prepared for the worst</md-card>
+    </md-card-content>
+  </md-card>
+</div>
+
+<div class="move">
+  <md-card>
+    <md-card-title>When you read a charged situation</md-card-title>
+    <md-card-subtitle>Trigger</md-card-subtitle>
+  </md-card>
+  <md-card class="randomizer">
+    <md-card-title>roll+sharp</md-card-title>
+    <md-card-subtitle>Randomizer</md-card-subtitle>
+    <md-card-content>
+      <md-card class="success">
+        On a 10+, ask 3
+      </md-card>
+      <md-card class="partial">
+        On a 7-9, ask 1
+      </md-card>
+      <md-card class="failure">On a miss, ask 1 anyway, but be prepared for the worst.</md-card>
+    </md-card-content>
+  </md-card>
+  <md-card class="action">
+    <md-card-subtitle>Action</md-card-subtitle>
+    <md-card-content>Ask questions:
+    <ul>
+      <li>Where’s my best escape route / way in / way past?</li>
+      <li>Which enemy is most vulnerable to me?</li>
+      <li>Which enemy is the biggest threat?</li>
+      <li>What should I be on the lookout for?</li>
+      <li>What’s my enemy’s true position?</li>
+      <li>Who’s in control here?</li>
+    </ul></md-card-content>
+  </md-card>
+  <md-card class="action">
+    <md-card-subtitle>Action</md-card-subtitle>
+    <md-card-content>Whenever you act on one of the MC’s answers, take +1</md-card-content>
+  </md-card>
+</div>-->

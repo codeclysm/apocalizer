@@ -1,39 +1,11 @@
 import { Component } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
-
-import { Move } from './move/move';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],  
-  animations: [
-    trigger('moveStatus', [
-      state('inactive', style({
-        width: '15%',
-      })),
-      state('active',   style({
-        width: '30%',
-      })),
-      transition('inactive => active', animate('300ms ease-in')),
-      transition('active => inactive', animate('300ms ease-out'))
-    ])
-  ]
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  active: string = 'Do something under fire';
-
-  status(move: Move): string {
-    if (move.name === this.active) {
-      return 'active';
-    }
-    return 'inactive';
-  } 
-
-  activate(move: Move) {
-    this.active = move.name;
-  }
-
   moves = [
     {
       name: 'Do something under fire',
