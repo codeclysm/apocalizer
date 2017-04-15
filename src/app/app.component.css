@@ -1,0 +1,28 @@
+.move {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.move .trigger,
+.move .randomizer,
+.move .randomizer-result {
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.move .connector {
+    text-align: center;
+}
+
+.move .connector i {
+    font-size: 1.5em;
+}
+
+.move .randomizer-results {
+    display: flex;
+}
+
+.move .randomizer-result {
+    width: 33%;
+}
