@@ -18,6 +18,7 @@ export class Randomizer {
     type: string;
     text: string;
     results: RandomizerResult[];
+    details: string;
 }
 
 export class RandomizerResult {

@@ -77,6 +77,69 @@ export class AppComponent {
           ]
         }
       ]
+    },
+    {
+      name: 'Seduce or manipulate an NPC',
+      steps: [
+        {
+          type: 'trigger',
+          text: 'When you try to seduce, manipulate, bluff, fast-talk, or lie to an NPC'
+        },
+        {
+          type: 'action',
+          text: 'Give them a reason'
+        },
+        {
+          type: 'randomizer',
+          text: 'Roll +Hard',
+          results: [
+            {
+              name: 'success',
+              text: 'On a 10+, they’ll go along with you, unless or until some fact or action betrays the reason'
+            },
+            {
+              name: 'partial',
+              text: 'On a 7-9, they’ll go along with you, but they need some concrete assurance, corroboration, or evidence first'
+            },
+            {
+              name: 'failure',
+              text: 'On a miss, be prepared for the worst.'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      name: 'Read a sitch',
+      steps: [
+        {
+          type: 'trigger',
+          text: 'When you read a charged situation'
+        },
+        {
+          type: 'randomizer',
+          text: 'Roll +Hard',
+          results: [
+            {
+              name: 'success',
+              text: 'On a 10+, ask 3'
+            },
+            {
+              name: 'partial',
+              text: 'On a 7-9, ask 1'
+            },
+            {
+              name: 'failure',
+              text: 'On a miss, ask 1 anyway, but be prepared for the worst.'
+            }
+          ],          
+          details: 'Questions: \n- Where’s my best escape route / way in / way past?\n- Which enemy is most vulnerable to me?\n- Which enemy is the biggest threat?\n- What should I be on the lookout for?\n- What’s my enemy’s true position?\n- Who’s in control here?'
+        },
+        {
+          type: 'action',
+          text: 'Whenever you act on one of the MC’s answers, take +1'
+        },
+      ]
     }
   ]
 }

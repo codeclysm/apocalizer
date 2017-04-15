@@ -4,4 +4,7 @@
   <md-card *ngFor="let result of data.results" [class]="result.name">
     <markdown-to-html>{{ result.text }}</markdown-to-html>
   </md-card>
+  <md-card-content class="details">
+    <markdown-to-html>{{ data.details }}</markdown-to-html>
+  </md-card-content>
 </md-card>
