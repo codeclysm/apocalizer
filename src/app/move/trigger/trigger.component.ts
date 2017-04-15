@@ -8,16 +8,32 @@ import { Trigger } from '../move';
   templateUrl: './trigger.component.html',
   styleUrls: ['./trigger.component.css'],
   animations: [
-    trigger('stateA', [
+    trigger('content', [
       state('inactive', style({
-        opacity: '0.8'
+        opacity: '1'
       })),
       state('hover',   style({
         opacity: '1'
+      })),     
+      state('edit',   style({
+        opacity: '0.5'
       })),
-      transition('inactive => hover', animate('100ms ease-in')),
-      transition('hover => inactive', animate('100ms ease-out')),
+      transition('inactive <=> hover', animate('200ms ease-in')),
+      transition('hover <=> edit', animate('200ms ease-out')),
+      transition('edit <=> inactive', animate('200ms ease-out')),
+    ]),
+    trigger('flyInOut', [
+      state('in', style({
+        opacity: 1
+      })),
+      transition('void => *', [
+        style({
+          opacity: 0,
+        }),
+        animate('0.2s ease-in')
+      ])
     ])
+
   ]
 })
 export class TriggerComponent implements Input {
